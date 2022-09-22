@@ -56,6 +56,9 @@ head_row.appendChild(th4);
 
 alueTable.appendChild(thead1);
 
+let alueBody = document.createElement("tbody");
+alueTable.appendChild(alueBody);
+
 
 
 async function getAlueData() {
@@ -90,7 +93,7 @@ async function getAlueData() {
   Object.keys(alueJSON.dataset.dimension.Alue.category.label).forEach(key => {
     let tr = document.createElement("tr")
     
-    
+
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
@@ -105,7 +108,7 @@ async function getAlueData() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-    alueTable.appendChild(tr);
+    alueBody.appendChild(tr);
     ID = ID+1;
   });
 
