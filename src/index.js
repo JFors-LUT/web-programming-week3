@@ -15,17 +15,20 @@ if (document.readyState !== "loading") {
 let divider = document.createElement("div");
 divider.className = "center";
 
-
-let alueTable = document.createElement("table");
-alueTable.id = "alue";
-divider.append(alueTable);
-
-//let thead1 = document.createElement("thead");
-//header1.innerHTML = thead1;
 let header1 = document.createElement("h1");
 header1.innerHTML = "Municipality employment statistics in Finland";
 
-document.body.appendChild(header1);
+
+let alueTable = document.createElement("table");
+alueTable.id = "alue";
+divider.appendChild(header1);
+divider.append(alueTable);
+
+
+//let thead1 = document.createElement("thead");
+//header1.innerHTML = thead1;
+
+
 
 document.body.appendChild(divider);
 
