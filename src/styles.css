@@ -10,7 +10,7 @@ table{
   width: 100%;
 }
 
-tr{
+td{
   padding: 6px;
   border-bottom: 1px solid gray;
 }
