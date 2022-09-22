@@ -2,6 +2,16 @@
 
 //const alueTable = document.getElementById("alue");
 
+if (document.readyState !== "loading") {
+  //console.log("Document is ready!");
+  getAlueData();
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    //console.log("Document is ready after waiting!");
+    getAlueData();
+  });
+}
+
 let divider = document.createElement("div");
 divider.className = "center";
 
@@ -44,6 +54,8 @@ thead1.appendChild(th3);
 thead1.appendChild(th4);
 
 alueTable.appendChild(thead1);
+
+
 
 async function getAlueData() {
   
@@ -142,7 +154,7 @@ async function getAlueData() {
     ID = ID+1;
   }); 
 }
-
+//}
 
 /*<!--<div class="center">
 <table id="alue">
