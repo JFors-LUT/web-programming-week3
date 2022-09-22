@@ -19,12 +19,12 @@ document.body.appendChild(header1);
 
 document.body.appendChild(divider);
 
+/*
 let getAlueButton = document.createElement("button");
 getAlueButton.innerHTML = "Get areas";
 document.body.appendChild(getAlueButton);
-
 getAlueButton.addEventListener("click", getAlueData);
-
+*/
 
 
 let thead1 = document.createElement("thead")
