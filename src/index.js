@@ -12,6 +12,10 @@ divider.append(alueTable);
 
 //let thead1 = document.createElement("thead");
 //header1.innerHTML = thead1;
+let header1 = document.createElement("h1");
+header1.innerHTML = "Municipality employment statistics in Finland";
+
+document.body.appendChild(header1);
 
 document.body.appendChild(divider);
 
@@ -21,7 +25,7 @@ document.body.appendChild(getAlueButton);
 
 getAlueButton.addEventListener("click", getAlueData);
 
-let header1 = document.createElement("h1");
+
 
 let thead1 = document.createElement("thead")
 let th1 = document.createElement("th");
@@ -38,9 +42,6 @@ thead1.appendChild(th1);
 thead1.appendChild(th2);
 thead1.appendChild(th3);
 thead1.appendChild(th4);
-
-//header1.appendChild(thead1);
-
 
 alueTable.appendChild(thead1);
 
