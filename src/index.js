@@ -1,7 +1,10 @@
 //import "./styles.css";
 
 const alueTable = document.getElementById("alue");
-const getAlueButton = document.getElementById("getAlueet");
+
+let getAlueButton = document.createElement("button");
+getAlueButton.innerHTML = "Get areas";
+document.body.appendChild(getAlueButton);
 
 getAlueButton.addEventListener("click", getAlueData);
 
