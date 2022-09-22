@@ -1,12 +1,46 @@
 //import "./styles.css";
 
-const alueTable = document.getElementById("alue");
+//const alueTable = document.getElementById("alue");
+
+//let divider = document.createElement("div");
+//divider.className = "center";
+
+
+let alueTable = document.createElement("table");
+alueTable.id = "alue";
+//divider.innerHTML = alueTable;
+
+//let header1 = document.createElement("h1");
+//alueTable.innerHTML = header1
+
+//let thead1 = document.createElement("thead");
+//header1.innerHTML = thead1;
+
+document.body.appendChild(alueTable);
 
 let getAlueButton = document.createElement("button");
 getAlueButton.innerHTML = "Get areas";
 document.body.appendChild(getAlueButton);
 
 getAlueButton.addEventListener("click", getAlueData);
+
+let thead = document.createElement("thead")
+let th1 = document.createElement("th");
+let th2 = document.createElement("th");
+let th3 = document.createElement("th");
+let th4 = document.createElement("th");
+
+th1.innerText = 'Municipality';
+th2.innerText = 'Population';
+th3.innerText = 'Employment';
+th4.innerText = 'Employment-%';
+
+thead.appendChild(th1);
+thead.appendChild(th2);
+thead.appendChild(th3);
+thead.appendChild(th4);
+
+alueTable.appendChild(thead);
 
 async function getAlueData() {
   
@@ -19,7 +53,7 @@ async function getAlueData() {
   const tyoPromise = await fetch(tyoUrl)
   const tyoJSON = await tyoPromise.json()
 
-  let thead = document.createElement("thead")
+  /*let thead = document.createElement("thead")
   let th1 = document.createElement("th");
   let th2 = document.createElement("th");
   let th3 = document.createElement("th");
@@ -35,7 +69,7 @@ async function getAlueData() {
   thead.appendChild(th3);
   thead.appendChild(th4);
 
-  alueTable.appendChild(thead);
+  alueTable.appendChild(thead);*/
 
   Object.keys(alueJSON.dataset.dimension.Alue.category.label).forEach(key => {
     let tr = document.createElement("tr")
@@ -105,3 +139,16 @@ async function getAlueData() {
     ID = ID+1;
   }); 
 }
+
+
+/*<!--<div class="center">
+<table id="alue">
+  <h1>
+    <thead>
+    </thead>
+  </h1>
+<tbody class="body">
+  <tr></tr>
+</tbody>
+</table>
+</div>-->*/
