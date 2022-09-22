@@ -4,13 +4,24 @@
 <head>
 	<title>Parcel Sandbox</title>
 	<meta charset="UTF-8" />
+	<script src="src/index.js" defer></script>
+	<link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-	<div id="app"></div>
-
-	<script src="src/index.js">
-	</script>
+	
+	<div class="center">
+		<table id="alue">
+		<thead>
+			<th id="header">Municipality</th> <th>Population</th> 
+			<th>Employment amount</th><th>Employment-%</th>
+		</thead>
+		<tbody class="body">
+			<tr></tr>
+		</tbody>
+		</table>
+	</div>
+	<button id="getAlueet">Get areas</button>
 </body>
 
 </html>
