@@ -15,7 +15,24 @@ async function getAlueData() {
   const tyoUrl = "https://statfin.stat.fi/PxWeb/sq/5e288b40-f8c8-4f1e-b3b0-61b86ce5c065"
   const tyoPromise = await fetch(tyoUrl)
   const tyoJSON = await tyoPromise.json()
+
+  let thead = document.createElement("thead")
+  let th1 = document.createElement("th");
+  let th2 = document.createElement("th");
+  let th3 = document.createElement("th");
+  let th4 = document.createElement("th");
   
+  th1.innerText = 'Municipality';
+  th2.innerText = 'Population';
+  th3.innerText = 'Employment';
+  th4.innerText = 'Employment-%';
+
+  thead.appendChild(th1);
+  thead.appendChild(th2);
+  thead.appendChild(th3);
+  thead.appendChild(th4);
+
+  alueTable.appendChild(thead);
 
   Object.keys(alueJSON.dataset.dimension.Alue.category.label).forEach(key => {
     let tr = document.createElement("tr")
@@ -57,9 +74,7 @@ async function getAlueData() {
     let td2 = document.getElementById('vaki'+ID)
     let td3 = document.getElementById('tyo'+ID)
     let td4 = document.getElementById('tyo%'+ID)
-
-    console.log(tr)
-    
+ 
     tyoValue = tyoJSON.dataset.value[key]
     td3.innerText = tyoValue;
     tyoRatio = (tyoValue/parseInt(td2.innerHTML)*100).toFixed(2);
@@ -85,27 +100,5 @@ async function getAlueData() {
 
 
     ID = ID+1;
-  });
-  
-
-  /*alueJSON.forEach((alue) => {
-
-    console.log(alue)
-    let tr = document.createElement("tr")
-    let td1 = document.createElement("td")
-    let td2 = document.createElement("td")
-
-    console.log(td1)
-
-
-
-
-
-    td1.innerText = alue.dataset.dimension.Alue.category.label
-    //td2.innerText = dataset.value
-    tr.appendChild(td1)
-    //tr.appendChild(td2)
-
-    alueTable.appendChild(tr)
-})*/
+  }); 
 }
