@@ -2,21 +2,18 @@
 
 //const alueTable = document.getElementById("alue");
 
-//let divider = document.createElement("div");
-//divider.className = "center";
+let divider = document.createElement("div");
+divider.className = "center";
 
 
 let alueTable = document.createElement("table");
 alueTable.id = "alue";
-//divider.innerHTML = alueTable;
-
-//let header1 = document.createElement("h1");
-//alueTable.innerHTML = header1
+divider.append(alueTable);
 
 //let thead1 = document.createElement("thead");
 //header1.innerHTML = thead1;
 
-document.body.appendChild(alueTable);
+document.body.appendChild(divider);
 
 let getAlueButton = document.createElement("button");
 getAlueButton.innerHTML = "Get areas";
@@ -24,7 +21,9 @@ document.body.appendChild(getAlueButton);
 
 getAlueButton.addEventListener("click", getAlueData);
 
-let thead = document.createElement("thead")
+let header1 = document.createElement("h1");
+
+let thead1 = document.createElement("thead")
 let th1 = document.createElement("th");
 let th2 = document.createElement("th");
 let th3 = document.createElement("th");
@@ -35,12 +34,15 @@ th2.innerText = 'Population';
 th3.innerText = 'Employment';
 th4.innerText = 'Employment-%';
 
-thead.appendChild(th1);
-thead.appendChild(th2);
-thead.appendChild(th3);
-thead.appendChild(th4);
+thead1.appendChild(th1);
+thead1.appendChild(th2);
+thead1.appendChild(th3);
+thead1.appendChild(th4);
 
-alueTable.appendChild(thead);
+//header1.appendChild(thead1);
+
+
+alueTable.appendChild(thead1);
 
 async function getAlueData() {
   
