@@ -16,7 +16,7 @@ tr{
 }
 
 
-table > thead > th{
+table > thead > tr > th{
 
   background-color: #b7d0ff;
   font: bold;

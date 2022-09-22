@@ -37,7 +37,8 @@ getAlueButton.addEventListener("click", getAlueData);
 */
 
 
-let thead1 = document.createElement("thead")
+let thead1 = document.createElement("thead");
+let head_row = thead1.insertRow(0);
 let th1 = document.createElement("th");
 let th2 = document.createElement("th");
 let th3 = document.createElement("th");
@@ -48,10 +49,10 @@ th2.innerText = 'Population';
 th3.innerText = 'Employment';
 th4.innerText = 'Employment-%';
 
-thead1.appendChild(th1);
-thead1.appendChild(th2);
-thead1.appendChild(th3);
-thead1.appendChild(th4);
+head_row.appendChild(th1);
+head_row.appendChild(th2);
+head_row.appendChild(th3);
+head_row.appendChild(th4);
 
 alueTable.appendChild(thead1);
 
@@ -89,7 +90,7 @@ async function getAlueData() {
   Object.keys(alueJSON.dataset.dimension.Alue.category.label).forEach(key => {
     let tr = document.createElement("tr")
     
-
+    
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
