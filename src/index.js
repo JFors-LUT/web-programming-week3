@@ -141,7 +141,7 @@ async function getAlueData() {
     tyoRatio = Math.round(((tyoValue/parseInt(td2.innerHTML)*100)+ Number.EPSILON)* 100) / 100
     td4.innerText = tyoRatio+'%';
     
-    if(tyoRatio < 25){
+    if(tyoRatio < 26){
       tr.className = 'huono'
       td1.className = 'huono'
       td2.className = 'huono'
@@ -150,7 +150,7 @@ async function getAlueData() {
       
     }
 
-    if(tyoRatio > 45){
+    if(tyoRatio > 44){
       tr.className = 'hyva'
       td1.className = 'hyva'
       td2.className = 'hyva'
