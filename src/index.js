@@ -141,19 +141,19 @@ async function getAlueData() {
     
     if(tyoRatio < 25){
       tr.className = 'huono'
-      //td1.className = 'huono'
-      //td2.className = 'huono'
-      //td3.className = 'huono'
-      //td4.className = 'huono'
+      td1.className = 'huono'
+      td2.className = 'huono'
+      td3.className = 'huono'
+      td4.className = 'huono'
       
     }
 
     if(tyoRatio > 45){
       tr.className = 'hyva'
-      //td1.className = 'hyva'
-      //td2.className = 'hyva'
-      //td3.className = 'hyva'
-      //td4.className = 'hyva'
+      td1.className = 'hyva'
+      td2.className = 'hyva'
+      td3.className = 'hyva'
+      td4.className = 'hyva'
     }
 
 
