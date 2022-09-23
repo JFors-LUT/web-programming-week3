@@ -136,9 +136,7 @@ async function getAlueData() {
  
     tyoValue = tyoJSON.dataset.value[key]
     td3.innerText = tyoValue;
-    //tyoRatio = (tyoValue/parseInt(td2.innerHTML)*100).toFixed(2);
-    //tyoRatio = Math.round((tyoValue/parseInt(td2.innerHTML)*100) * 100) / 100
-    tyoRatio = Math.round(((tyoValue/parseInt(td2.innerHTML)*100)+ Number.EPSILON)* 100) / 100
+    tyoRatio = (tyoValue/parseInt(td2.innerHTML)*100).toFixed(2);
     td4.innerText = tyoRatio+'%';
     
     if(tyoRatio < 25.00){
